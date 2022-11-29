@@ -13,7 +13,7 @@ const { Server } = require("socket.io");
 // WebSocketのインスタンスを作成。
 const io = new Server(server);
 // ポート番号
-const PORT = 8000;
+const PORT = 8090;
  
 // クライアントからルートにアクセスがあった場合の処理を記述します。
 app.get("/", (req,res) => {
