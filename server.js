@@ -10,8 +10,9 @@ const server = http.createServer(app);
 // WebSocket技術によるデータの双方向通信のインスタンスを作成します。
 // serverのインスタンスを引数に渡します。
 const { Server } = require("socket.io");
+// WebSocketのインスタンスを作成。
 const io = new Server(server);
-// 
+// ポート番号
 const PORT = 8000;
  
 // クライアントからルートにアクセスがあった場合の処理を記述します。
@@ -30,5 +31,5 @@ io.on("connection", (socket) => {
  
 // サーバーを指定したポートでリッスン開始します。
 server.listen(PORT, () => {
-    console.log("listening on 8000");
+    console.log(`listening on ${PORT}`);
 } );
